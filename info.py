@@ -14,8 +14,8 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'Media_search')
 API_ID = '7880210'
 API_HASH = '1bb4b2ff1489cc06af37cba448c8cce9'
-BOT_TOKEN = '1816321353:AAFH119wAk6Kpxw5TtCZuYymdDP4tTQYAJk'
-UPSTREAM_REPO = 'https://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@github.com/sittpaing123/IU1'
+BOT_TOKEN = '5410024892:AAEHSoJ6dubBPmaXIQhPM5-vlUgRBOq0kuk'
+UPSTREAM_REPO = ""
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -24,17 +24,17 @@ PICS2 = (environ.get('PICS', 'https://telegra.ph/file/fb63bf5bd0692d9ec60eb.jpg 
 PICS = (environ.get('PICS', 'https://telegra.ph/file/4e1db5029f98b5b8fa765.jpg https://telegra.ph/file/12594e6cd42c084cffe33.jpg')).split()
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1113630298').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001161641413').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001161641413')
+auth_channel = environ.get('AUTH_CHANNEL', '')
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://bot1:bot1@cluster0.fqzak9o.mongodb.net/?retryWrites=true&w=majority")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "iu")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
