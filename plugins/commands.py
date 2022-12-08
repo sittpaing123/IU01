@@ -30,7 +30,7 @@ FORCE_TEXT="""Please Join My Update Join Channel and Try again
 
 Join Channel 👉 @MKSVIPLINK"""
 
-@Client.on_message(filters.command("start") & filters.incoming & ~filters.edited)
+@Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
