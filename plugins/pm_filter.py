@@ -763,7 +763,7 @@ async def auto_filter(client, msg, q_id: str):
         k += 1
     btn = []
     if offset != "" and total_results > 10:
-        key = f"{msg.chat.id}-{msg.message_id}"
+        key = f"{msg.chat.id}-{msg.from_user.id}"
         BUTTONS[key] = search
         req = msg.from_user.id if msg.from_user else 0
         btn.append(
