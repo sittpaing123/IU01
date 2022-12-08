@@ -101,7 +101,7 @@ async def give_filter(client, message):
 async def give_filter(client, message):
     k = await manual_filters(client, message)
     if k == False:
-        key = f"{message.message_id}_{message.chat.id}"
+        key = f"{message.from_user.id}_{message.chat.id}"
         if message.text.startswith("/"):
             return 
         if re.findall("((^\/|^,|^!|^\.|^[\U0001F600-\U000E007F]).*)", message.text):
